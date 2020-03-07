@@ -16,3 +16,15 @@ $(function () {
         ]
     });
 });
+
+$("#update").on("click", function() {
+    alert("クリックされました");
+    $.ajax({
+        type:"POST",
+        contentType: "application/json",
+        url:"http://localhost:8080/rest/gameList",
+        data:JSON.stringify(jsonData),
+        dataType:"json"
+    });
+});
+
