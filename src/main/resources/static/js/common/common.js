@@ -1,15 +1,18 @@
+var keyData=["id", "gameName", "companyName"];
+
 var jsonData = [
-    {"id": "1", "gameName": "Bloodborne", "companyName": "フロムソフトウェア"},
-    {"id": "2", "gameName": "Skyrim", "companyName": "ベセスダ"}
+    {[keyData[0]]: "1", [keyData[1]]: "Bloodborne", [keyData[2]]: "フロムソフトウェア"},
+    {[keyData[0]]: "2", [keyData[1]]: "Skyrim", [keyData[2]]: "ベセスダ"},
+    {[keyData[0]]: "3", [keyData[1]]: "RDR2", [keyData[2]]: "ロックスターゲームズ"}
 ];
 
 $(function () {
     $("#data-table").DataTable({
         data: jsonData,
         columns: [
-            {data: 'id'},
-            {data: 'gameName'},
-            {data: 'companyName'}
+            {data: keyData[0]},
+            {data: keyData[1]},
+            {data: keyData[2]}
         ]
     });
 });
