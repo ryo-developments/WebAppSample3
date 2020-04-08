@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザログイン</title>
+    <link href="/css/bootstrap-4.4.1/bootstrap.custom.css" th:href="@{/css/bootstrap-4.4.1/bootstrap.custom.css}"
+        rel="stylesheet" />
+    <link href="/css/log101/log101.css" th:href="@{/css/log101/log101.css}" rel="stylesheet" />
+</head>
+
+<body class="text-center">
+    <form class="form-signin">
+        <!-- <img class="mb-4" src="../images/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+        <h1 class="h3 mb-3 font-weight-normal">新規会員の方はこちら</h1>
+        <label for="inputEmail" class="sr-only">Emailアドレス</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Emailアドレス" required autofocus>
+        <label for="inputPassword" class="sr-only">パスワード</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="rememberCheck">
+            <label class="form-check-label" for="rememberCheck">
+                状態を記憶する
+            </label>
+        </div>
+        <button id="login" class="btn btn-lg btn-primary btn-block" type="submit">サインイン</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+
+    <!--
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script>
+-->
+    <script th:src="@{/webjars/jquery/{version}/jquery.min.js(version=${@webjarsConfig.jquery})}"></script>
+    <script src="/js/log101/log101.js" th:src="@{/js/log101/log101.js}"></script>
+</body>
+
+</html>

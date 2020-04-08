@@ -9,10 +9,9 @@ import java.util.List;
 @RequestMapping("/rest")
 public class RestGameController {
 
-    @RequestMapping(value = "/gameList", method = {RequestMethod.POST})
+    @RequestMapping(value = "/gameList", method = { RequestMethod.POST })
     @ResponseBody
-    public List<GameInfo> gameInfoList(
-            @RequestBody List<GameInfo> gameInfoList) {
+    public List<GameInfo> gameInfoList(@RequestBody List<GameInfo> gameInfoList) {
         int num = 2;
         System.out.println(gameInfoList.get(num).getId());
         System.out.println(gameInfoList.get(num).getGameName());
